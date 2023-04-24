@@ -1,37 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simple Calculator</title>
-   </head>
-  <body>
-    <button onclick="calculate()">Calculate</button>
-    <div id="result"></div>
-    <script>
-      function calculate() {
-        var num1 = prompt("Enter first number:");
-        var num2 = prompt("Enter second number:");
-        var operator = prompt("Enter operator (+, -, *, /):");
-        var result;
-        if (operator == "+") {
-          result = parseInt(num1) + parseInt(num2);
-        } else if (operator == "-") {
-          result = parseInt(num1) - parseInt(num2);
-        } else if (operator == "*") {
-          result = parseInt(num1) * parseInt(num2);
-        } else if (operator == "/") {
-          result = parseInt(num1) / parseInt(num2);
-        } else {
-          result = "Invalid operator";
-        }
-        document.getElementById("result").innerHTML = "Result: " + result;
-      }
-    </script>
-  </body>
-  <style>
-    #result {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-  </style>
+<head>
+ <title>顯示圖片</title>
+</head>
+<body>
+ <button onclick="showImage()">顯示圖片</button>
+ <img id="myImage" style="display: none;" src="" width="300" height="200">
+ <script>
+  function showImage() {
+   var imgUrl = "https://via.placeholder.com/300x200"; // 圖片 URL
+   document.getElementById("myImage").src = imgUrl; // 設定圖片的網址
+   document.getElementById("myImage").style.display = "block"; // 顯示圖片
+  }
+ </script>
+</body>
 </html>
